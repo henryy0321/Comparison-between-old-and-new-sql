@@ -1,0 +1,5 @@
+{
+  "read-heavy": {"read": 0.95, "update": 0.05},
+  "mixed": {"read": 0.50, "update": 0.50},
+  "write-heavy": {"read": 0.05, "update": 0.95}
+}

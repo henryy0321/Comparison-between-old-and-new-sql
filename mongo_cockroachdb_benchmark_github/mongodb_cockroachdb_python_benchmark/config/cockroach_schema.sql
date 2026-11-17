@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS usertable (
+    id STRING PRIMARY KEY,
+    field0 STRING NOT NULL,
+    field1 STRING NOT NULL,
+    field2 STRING NOT NULL,
+    field3 STRING NOT NULL,
+    field4 STRING NOT NULL,
+    field5 STRING NOT NULL,
+    field6 STRING NOT NULL,
+    field7 STRING NOT NULL,
+    field8 STRING NOT NULL,
+    field9 STRING NOT NULL
+);

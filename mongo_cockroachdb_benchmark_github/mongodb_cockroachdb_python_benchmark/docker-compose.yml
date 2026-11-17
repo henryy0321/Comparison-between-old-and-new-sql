@@ -1,0 +1,24 @@
+services:
+  mongodb:
+    image: mongo:8.0
+    container_name: benchmark-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  cockroachdb:
+    image: cockroachdb/cockroach:v24.3.0
+    container_name: benchmark-cockroachdb
+    restart: unless-stopped
+    command: start-single-node --insecure --listen-addr=0.0.0.0:26257 --advertise-addr=localhost:26257 --http-addr=0.0.0.0:8080
+    ports:
+      - "26257:26257"
+      - "8080:8080"
+    volumes:
+      - cockroach_data:/cockroach/cockroach-data
+
+volumes:
+  mongodb_data:
+  cockroach_data:
